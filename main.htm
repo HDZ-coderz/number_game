@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="call()">
+    <div class="box">Calculate the number</div><br>
+    <div class="container">
+        <dialog id="rules" open>
+            <button class="cls" onclick="r_close()" title="close">&times;</button><br>
+            <U>Rules:-</U>
+            <OL>
+                <LI>You have to input the number which is 1 or 2 number ahead of given number.<br>
+                    Eg:- If the given number is 8.You can input 9 or 10 only.
+                </LI>
+                <LI><UL>
+                    <LI>If you manage to input the number to win.You win but if computer is able to get number to win first. You lose.</LI>
+                    <LI>The number to win is given below as Number required to win:n(n= number eg 1,2,3).</LI>
+                    </UL>
+                </LI>
+            </OL>
+        </dialog>
+        <p id="g" title="Given number"></p><br>
+        <spam id="w" title="The Number to win"></spam><br><br>
+        <input id="val" placeholder="Enter number" type="number"><br><br>
+        <button class="go" onclick="check()">Go</button>
+        <button class="new" onclick="new_game()">New game</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

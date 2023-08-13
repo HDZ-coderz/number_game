@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color:black;
+}
+.box{
+    background-color:dodgerblue;
+    color:white;
+    height:60px;
+    padding:20px;
+    font-family: cursive;
+    width:100%;
+    animation:light 10s infinite ease;
+    box-shadow: 1px 5px 100px red;
+}
+#val{
+    outline:2px solid dodgerblue;
+    border: none;
+    background-color: transparent;
+    transition:outline 1s,box-shadow 1s;
+    font-size:22px;
+    color:aliceblue;
+}
+#val:focus{
+    outline:1px solid yellow;
+    box-shadow:0px 0px 20px white;
+}
+#val:hover{
+    outline: 1px solid orange;
+}
+.container{
+    margin:auto;
+    position: absolute;
+    width:99%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+}
+p#g{
+    font-size:60px;
+}
+button{
+    padding:18px;
+    font-family:18px;
+    color:aliceblue;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 10%;
+}
+button.go{
+    background-color: rgb(1, 139, 93);
+    transition: box-shadow 0.2s;
+}
+button.new{
+    background-color: rgb(207, 11, 11);
+}
+button:active{
+    background-color:color-mix(in srgb,dodgerblue 20%, white 40%);
+}
+button:hover{
+    animation:s ease 2s infinite;
+}
+@keyframes s{
+0%{box-shadow:0px 0px 0px rgb(30, 143, 255);}
+50%{box-shadow:0px 0px 22px dodgerblue;}
+100%{box-shadow:0px 0px 0px rgb(30, 143, 255);}
+}
+@keyframes light{
+0%{box-shadow:1px 5px 100px red;}
+50%{box-shadow:1px 5px 100px mediumseagreen;}
+75%{box-shadow:1px 5px 100px skyblue;}
+100%{box-shadow:1px 5px 100px red;}
+}
+dialog{
+    height:80vh;
+    width: 100%;
+    text-align: left;
+    aspect-ratio: 1/2;
+    outline:1px solid cyan;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    backdrop-filter: blur(2px);
+    transition: opacity 1s;
+    user-select: none;
+}
+button.cls{
+    float:right;
+    background-color: orange;
+    font-size:20px;
+    font-weight: bold;
+    aspect-ratio: 1/1;
+    padding:0px;
+    min-height:30px;
+    min-width: 30px;
+}
+button.cls:hover{
+    background-color: orangered;
+}
